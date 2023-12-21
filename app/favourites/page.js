@@ -42,7 +42,8 @@ const FavoritesPage = () => {
                 // Check if the user is authenticated
                 if (!user) {
                     console.error('User is not authenticated.');
-                    router.push('./login');
+                    alert('User is not authenticated. Sign up first!!')
+                    // router.push('./login');
                     return;
                 }
 
