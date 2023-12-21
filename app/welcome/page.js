@@ -85,7 +85,7 @@ const GifContainer = styled.div`
 
 const StarButton = styled.button`
   position: absolute;
-  top: 5px;
+  bottom: 5px;
   right: 5px;
   background-color: transparent;
   border: none;
@@ -241,17 +241,17 @@ const Home = () => {
 
             {!loading && gifs.length > 0 && (
                 <>
-                    <GalleryContainer className="flex">
+                    <GalleryContainer className="gif-container">
                         {gifs.map((gif) => (
-                            <GifContainer key={gif.id}>
-                                <GifImage src={gif.images.fixed_height.url} alt={gif.title} />
-                                <div>
+                            <GifContainer className='gif-content' key={gif.id}>
+                                <GifImage className='img' src={gif.images.fixed_height.url} alt={gif.title} />
+                                <div className='content'>
                                     <p>Uploaded by: {gif.username}</p>
                                     <p>Title: {gif.title}</p>
-                                </div>
                                 <StarButton onClick={() => toggleStar(gif)}>
                                     {isGifStarred(gif) ? '⭐️' : '☆'}
                                 </StarButton>
+                                </div>
                             </GifContainer>
                         ))}
                     </GalleryContainer>
