@@ -30,9 +30,21 @@
 
 .gif-content .img{
     background-color: #cecece;
-    width: 200px;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
 }
 
 .content p{
-    font-size: .7rem;
+    font-size: 8px;
+}
+
+.star{
+    padding: 2px;
 }
