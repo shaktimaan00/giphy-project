@@ -17,8 +17,8 @@ const SignIn = () => {
       const userExists = await checkIfUserExists(email);
 
       if (!userExists) {
-        alert("Please sign up first to continue.");
-        router.push('/sign-up');
+        alert("incorrect login credentials");
+        // router.push('/sign-up');
         return;
       }
 
